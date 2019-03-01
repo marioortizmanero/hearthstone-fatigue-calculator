@@ -20,7 +20,7 @@ def lethal_mode(d_input, s):
     return t
 
 
-print("~~~~ HEARTHSTONE FATIGUE CALCULATOR by Glow8 ~~~~")
+print("~~~~ HEARTHSTONE FATIGUE CALCULATOR by Mario O.M. ~~~~")
 
 while True:  # Checks if the mode input is valid
     try:
