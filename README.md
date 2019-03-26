@@ -1,7 +1,7 @@
 # Hearthstone Fatigue Calculator
-Just a handy fatigue calculator, pretty useful when you're playing Mill Rogue or similar stuff and you're too lazy to calculate the lethal damage. 
+A handy fatigue calculator, pretty useful when you're playing Mill Rogue or similar stuff and you're too lazy to calculate the lethal damage. 
 
-![](https://i.imgur.com/mIbLYWb.png)
+![](https://i.imgur.com/iXpPYC3.png)
 
 ## Modes
 1. **Lethal mode**: turns needed for X damage
