@@ -18,6 +18,8 @@ A handy fatigue calculator, pretty useful when you're playing Mill Rogue or simi
 
 3. Run the program with `python3 HS_Fatigue.py` in your console, making sure you are in the directory where you downloaded the files.
 
+4. You can exit the app by pressing `Ctrl + C`
+
 ## How it works
 The basics of this program are actually a very popular mathematical problem: the [triangular numbers](https://en.wikipedia.org/wiki/Triangular_number). They count objects arranged in an equilateral triangle, as in the diagram on the bottom:
 
