@@ -14,17 +14,17 @@ The basics of this program are actually a very popular mathematical problem: the
 
 ![](https://upload.wikimedia.org/wikipedia/commons/1/1c/First_six_triangular_numbers.svg)
 
-This is basically the sum of the dots of each row in our triangle:
+The total fatigue damage is basically the sum of the dots of each row in our triangle:
 
 ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/8411fe69f79f2971b7c7a453b0b547bb37e9f6df)
 
-But for fatigue damage, you don't always start at 1 dot. Maybe you're already 3 turns in and you want to calculate the damage left. That's when trapezoidal numbers come into play. You can learn more about them [on this paper by Carlton Gamer, David W. Roeder and John J. Watkins](https://www.jstor.org/stable/2689901?origin=crossref&seq=1#metadata_info_tab_contents).
+But in many situations, you don't always start at 1 dot. Maybe you're already 3 turns in and you want to calculate the damage needed for a fatigue lethal. That's when trapezoidal numbers come into play. You can learn more about them [on this paper by Carlton Gamer, David W. Roeder and John J. Watkins](https://www.jstor.org/stable/2689901?origin=crossref&seq=1#metadata_info_tab_contents). It's basically the same as the triangular numbers but starting at `k+1` instead of 1.
 
 ![](https://i.imgur.com/GsaR1wo.png)
 
  A trapezoidal triangle can be expressed as the entire triangular number (until `k+l`) minus the small triangular number (until `k`). The formula then can be simplified to:
  
- ![](https://i.imgur.com/vajUmq4.png)
+ ![](https://i.imgur.com/O49QOXH.png)
  
  to obtain the trapezoidal number beginning with `k+1`. Now, to find the turns given the total fatigue damage, we could use the solved formula for `l`:
 
