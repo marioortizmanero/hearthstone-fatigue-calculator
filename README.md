@@ -14,11 +14,11 @@ The basics of this program are actually a very popular mathematical problem: the
 
 ![](https://upload.wikimedia.org/wikipedia/commons/1/1c/First_six_triangular_numbers.svg)
 
-The total fatigue damage is basically the sum of the dots of each row in our triangle:
+The total fatigue damage is basically the sum of the points of each row in our triangle. The sum can then be expressed as a less computationally expensive formula:
 
 ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/8411fe69f79f2971b7c7a453b0b547bb37e9f6df)
 
-But in many situations, you don't always start at 1 dot. Maybe you're already 3 turns in and you want to calculate the damage needed for a fatigue lethal. That's when trapezoidal numbers come into play. You can learn more about them [on this paper by Carlton Gamer, David W. Roeder and John J. Watkins](https://www.jstor.org/stable/2689901?origin=crossref&seq=1#metadata_info_tab_contents). It's basically the same as the triangular numbers but starting at `k+1` instead of 1.
+But in many situations, you don't always start at 1 point. Maybe you're already 3 turns in and you want to calculate the damage needed for a fatigue lethal. That's when trapezoidal numbers come into play. You can learn more about them [on this paper by Carlton Gamer, David W. Roeder and John J. Watkins](https://www.jstor.org/stable/2689901?origin=crossref&seq=1#metadata_info_tab_contents). It's basically the same as the triangular numbers but starting at `k+1` instead of 1.
 
 ![](https://i.imgur.com/GsaR1wo.png)
 
