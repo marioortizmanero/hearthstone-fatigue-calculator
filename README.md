@@ -28,7 +28,7 @@ But in many situations, you don't always start at 1 dot. Maybe you're already 3 
  
  to obtain the trapezoidal number beginning with `k+1`. Now, to find the turns given the total fatigue damage, we could use the solved formula for `l`:
 
- ![](https://i.imgur.com/wTHGwW9.png)
+ ![](https://i.imgur.com/DducNJL.png)
 
  But as it's a quadratic equation and not as exact and simple as I'd want it to be, the program is just designed to loop until it finds the requested trapezoidal result. If you think of a better method, don't doubt in opening an issue in this repository and letting me know!
  
@@ -36,3 +36,4 @@ Other sources:
 
 * [C. Gamer, D. W. Roeder, and J. J. Watkins, “Trapezoidal Numbers,” Mathematics Magazine, vol. 58, no. 2, pp. 108–110, 1985](https://www.hindawi.com/journals/ijmms/2017/4515249/)
 * [R. Guy, “Sums of consecutive integers,” The Fibonacci Quarterly. Official Organ of the Fibonacci Association, vol. 20, no. 1, pp. 36–38, 1982](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.388.5889&rep=rep1&type=pdf)
+* Last two images and math calculations with the help of [WolframAlpha](https://www.wolframalpha.com/)
