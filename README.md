@@ -9,6 +9,15 @@ A handy fatigue calculator, pretty useful when you're playing Mill Rogue or simi
 
 *Note: You get to choose the initial fatigue damage in both modes*
 
+## How to use
+* If you don't want to install anything you can copy-paste the code in [HS_Fatigue.py](https://raw.githubusercontent.com/marioortizmanero/hearthstone-fatigue-calculator/master/HS_Fatigue.py) to [repl.it](https://repl.it/languages/python3).
+
+1. Clone this repository by clicking the green `Clone or download` button on top or type `git clone https://github.com/marioortizmanero/hearthstone-fatigue-calculator` in your console if you have Git installed.
+
+2. This is a [Python 3](https://www.python.org/downloads/) program and hence you'll need it set up on your computer. You can then open the console in the folder where you downloaded and unzipped this repository.
+
+3. Run the program with `python3 HS_Fatigue.py` in your console, making sure you are in the directory where you downloaded the files.
+
 ## How it works
 The basics of this program are actually a very popular mathematical problem: the [triangular numbers](https://en.wikipedia.org/wiki/Triangular_number). They count objects arranged in an equilateral triangle, as in the diagram on the bottom:
 
