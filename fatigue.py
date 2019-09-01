@@ -1,3 +1,6 @@
+#!/bin/python3
+
+import math
 from collections import defaultdict
 
 
@@ -18,22 +21,16 @@ def inputHandler(text):
 # Gets the trapezoidal number starting at k
 # a.k.a. getting the total fatigue damage for calc mode
 # See README.md for more info about the formula
-def trapezoidalNumber(l,k):
-    return l*(2*(k-1)+l+1)/2 if (l>=0 and k>=0) else 0
+def trapezoidalNumber(l, k):
+    return int(l*(2*(k-1)+l+1)/2) if (l >= 0 and k >= 0) else 0
 
 
-# Finds valid l in the previous formula (For lethal mode)
+# Finds valid l in the previous formula (for lethal mode)
 # a.k.a. getting the number of turns to reach a fatigue damage
-def findTrapezoidalNumber(n,k):
-    if n>=0 and k>=0:
-        lCounter = 0
-        nCounter = trapezoidalNumber(lCounter,k)
-        while (nCounter < n):
-            lCounter += 1
-            nCounter = trapezoidalNumber(lCounter,k)
-        return lCounter
-    else:
-        return 0
+# See README.md for more info about the formula
+def findTrapezoidalNumber(n, k):
+    return int(0.5 * (math.sqrt(4*k**2-4*k+8*n+1) - 2*k + 1)) \
+        if (n >= 0 and k >= 0) else 0
 
 
 # Mode 1: calculates turns needed for X cumulative fatigue damage
@@ -48,8 +45,8 @@ def lethalMode():
                 error()
             else:
                 break
-    
-        print("\n>> You will need %d fatigue turns for that sweet lethal" % findTrapezoidalNumber(maxDmg,dmg))
+
+        print(f"\n>> You will need {findTrapezoidalNumber(maxDmg, dmg)} fatigue turns for that sweet lethal")
 
 
 # Mode 2: calculates cumulative fatigue damage
@@ -65,12 +62,12 @@ def calcMode():
             else:
                 break
 
-        print("\n>> It will deal %d damage" % trapezoidalNumber(turns,dmg))
+        print(f"\n>> It will deal {trapezoidalNumber(turns, dmg)} damage")
 
 
 def main():
     # The input is obtained with a dictionary containing the mode functions
-    modesDict = defaultdict(lambda:error, { "1":lethalMode, "2":calcMode })
+    modesDict = defaultdict(lambda: error, {"1": lethalMode, "2": calcMode})
 
     print("~ Hearthstone Fatigue Calculator by Mario O.M. ~")
     while True:
