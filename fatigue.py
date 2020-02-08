@@ -4,20 +4,6 @@ import math
 from collections import defaultdict
 
 
-# Default error message
-def error():
-    print("\nWhoops! Something went wrong. Please check if your input was valid.")
-
-
-# Handler for Ctrl+C forced exit
-def inputHandler(text):
-    try:
-        return input(text)
-    except KeyboardInterrupt:
-        print("\nClosing the program...")
-        quit()
-
-
 # Gets the trapezoidal number starting at k
 # a.k.a. getting the total fatigue damage for calc mode
 # See README.md for more info about the formula
@@ -35,46 +21,49 @@ def findTrapezoidalNumber(n, k):
 
 # Mode 1: calculates turns needed for X cumulative fatigue damage
 def lethalMode():
+    # Cleanly getting the values:
     while True:
-        # Cleanly getting the values:
-        while True:
-            try:
-                maxDmg = int(inputHandler("\nPlease input the damage needed for lethal: "))
-                dmg = int(inputHandler("Starting at how much damage? (default is 1): ") or 1)
-            except ValueError:
-                error()
-            else:
-                break
+        try:
+            maxDmg = int(input("Please input the damage needed for lethal: "))
+            dmg = int(input("Starting at how much damage? (default is 1): ")
+                      or 1)
+        except ValueError:
+            print("ERROR: Your input value was invalid.\n")
+        else:
+            break
 
-        print(f"\n>> You will need {findTrapezoidalNumber(maxDmg, dmg)} fatigue turns for that sweet lethal")
+    print(f">> You will need {findTrapezoidalNumber(maxDmg, dmg)} fatigue"
+           " turn(s) for that sweet lethal\n")
 
 
 # Mode 2: calculates cumulative fatigue damage
 def calcMode():
+    # Cleanly getting the values:
     while True:
-        # Cleanly getting the values:
-        while True:
-            try:
-                turns = int(inputHandler("\nPlease input the fatigue turns: "))
-                dmg = int(inputHandler("Starting at how much damage? (default is 1): ") or 1)
-            except ValueError:
-                error()
-            else:
-                break
+        try:
+            turns = int(input("Please input the fatigue turns: "))
+            dmg = int(input("Starting at how much damage? (default is 1): ")
+                      or 1)
+        except ValueError:
+            print("ERROR: Your input value was invalid.\n")
+        else:
+            break
 
-        print(f"\n>> It will deal {trapezoidalNumber(turns, dmg)} damage")
+    print(f">> It will deal {trapezoidalNumber(turns, dmg)} damage\n")
 
 
 def main():
-    # The input is obtained with a dictionary containing the mode functions
-    modesDict = defaultdict(lambda: error, {"1": lethalMode, "2": calcMode})
-
     print("~ Hearthstone Fatigue Calculator by Mario O.M. ~")
     while True:
-        mode = inputHandler("\n1. Lethal mode: turns needed for X damage"
-                            "\n2. Calculator mode: damage dealt in X turns"
-                            "\nPlease type the desired mode (1 or 2): ")
-        modesDict[mode]()
+        print("1. Lethal mode: turns needed for X damage\n"
+              "2. Calculator mode: damage dealt in X turns")
+        mode = input("Please type the desired mode (1 or 2): ").strip()
+        if mode == "1":
+            lethalMode()
+        elif mode == "2":
+            calcMode()
+        else:
+            print("ERROR: Please select a valid mode.\n")
 
 
 if __name__ == '__main__':
